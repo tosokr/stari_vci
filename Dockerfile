@@ -4,6 +4,7 @@ LABEL maintainer="TosO <tosokr@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 RUN dpkg --add-architecture i386 && \ 
     apt update && \ 
+    apt install -y --no-install-recommends apt-utils \
     apt install -y \
         mailutils \
         postfix \
